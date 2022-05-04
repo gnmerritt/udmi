@@ -51,6 +51,7 @@ import udmi.schema.FamilyDiscoveryConfig;
 import udmi.schema.FamilyDiscoveryEvent;
 import udmi.schema.FamilyDiscoveryState;
 import udmi.schema.FamilyLocalnetModel;
+import udmi.schema.Hardware;
 import udmi.schema.Level;
 import udmi.schema.Metadata;
 import udmi.schema.PointEnumerationEvent;
@@ -351,6 +352,7 @@ public class Pubber {
 
     deviceState.system.operational = true;
     deviceState.system.serial_no = configuration.serialNo;
+    deviceState.system.hardware = new Hardware();
     deviceState.system.hardware.make = "BOS";
     deviceState.system.hardware.model = "pubber";
     deviceState.system.software = new HashMap<>();
